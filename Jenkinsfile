@@ -4,10 +4,10 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                //dir ('C:\\users\\prath\\PycharmProjects\\June5\ProjectOne'){
+                dir ('C:\\users\\prath\\PycharmProjects\\June5\ProjectOne'){
 
                 bat 'test.py'
-               // }
+                }
 
             }
         }
