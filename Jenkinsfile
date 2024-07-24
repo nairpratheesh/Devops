@@ -6,7 +6,7 @@ pipeline {
             steps {
                 dir ('C:\\users\\prath\\PycharmProjects\\June5\\ProjectOne'){
 
-                bat 'test.py'
+                bat 'rest_app.py'
                 }
 
             }
