@@ -8,8 +8,8 @@ from selenium.webdriver.common.by import By
 db_check_status = 0
 result = 0
 schema_name = 'mydb'
-user_name = "candidate"
-user_id = 3400
+user_name = "candidate5"
+user_id = 3403
 
 
 def back_testing(id, name):
