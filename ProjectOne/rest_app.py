@@ -1,4 +1,6 @@
 from flask import Flask, request
+import os
+import signal
 
 from ProjectOne.db_connector import get_user_name_from_db, create_new_user, update_user_name, delete_user_name
 
@@ -7,7 +9,11 @@ app = Flask(__name__)
 # local users storage
 users = {}
 
-
+# for terminating rest api server when required
+@app.route('/stop_server')
+def stop_server():
+    os.kill(os.getpid(),signal.CTRL_C_EVENT)
+    return 'server stopped'
 # supported methods
 @app.route('/users/<user_id>', methods=['GET', 'POST', 'DELETE', 'PUT'])
 def user(user_id):

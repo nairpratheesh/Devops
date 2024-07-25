@@ -1,10 +1,17 @@
-from random import randint
+import os
+import signal
+
 from flask import Flask
 
 from ProjectOne.db_connector import get_user_name_from_db
 
 app = Flask(__name__)
 
+# for terminating rest api server when required
+@app.route('/stop_server')
+def stop_server():
+    os.kill(os.getpid(),signal.CTRL_C_EVENT)
+    return 'server stopped'
 
 # using default
 @app.route('/users/get_user_data/<user_id>')
