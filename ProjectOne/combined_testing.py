@@ -1,10 +1,10 @@
-import requests
-import pymysql
-
-import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+import requests
+import pymysql
+import time
+
 
 db_check_status = 0
 result = 0
