@@ -1,5 +1,6 @@
-import pymysql
 import requests
+import pymysql
+
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
