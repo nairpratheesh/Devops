@@ -9,9 +9,9 @@ pipeline {
                 bat 'start/min rest_app.py'
                 bat 'start/min web_app.py'
                 bat 'backend_testing.py'
-5.              bat 'frontend _testing.py'
-6.              bat 'combined_testing.py'
-7.              bat 'clean_environment.py'
+                bat 'frontend _testing.py'
+                bat 'combined_testing.py'
+                bat 'clean_environment.py'
                 }
 
             }
