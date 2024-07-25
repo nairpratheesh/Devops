@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('run backend server') {
             steps {
-                dir ('C:\\users\\prath\\PycharmProjects\\June5'\\ProjectOne'){
+                dir ('C:\\users\\prath\\PycharmProjects\\June5\\ProjectOne'){
 
 //                     withEnv(['C:\\users\\prath\\PycharmProjects\\June5']) {
 //                         bat 'start/min ProjectOne\\rest_app.py'
