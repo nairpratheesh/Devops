@@ -11,9 +11,8 @@ pipeline {
 //                         bat 'start/min ProjectOne\\web_app.py'
 //                      bat 'backend_testing.py'
 //                      bat 'frontend _testing.py'
-//                         bat 'ProjectOne\\combined_testing.py'
+                         bat 'ProjectOne\\combined_testing.py'
     //                  bat 'clean_environment.py'
-                        echo $path
                         bat 'ProjectOne\\test.py'
 //                     }
                 }
