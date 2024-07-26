@@ -4,8 +4,8 @@ import requests
 db_check_status = 0
 result = 0
 schema_name = 'mydb'
-user_name = "prqsd"
-user_id = 33
+user_name = "test35"
+user_id = 35
 
 
 def back_testing(id, name):
@@ -18,9 +18,9 @@ res = back_testing(user_id, user_name)
 conn = pymysql.connect(host='127.0.0.1', port=3307, user='user', passwd='password', db=schema_name)
 # Getting a cursor from Database
 cursor = conn.cursor()
-
+print("Connection to db established")
 exect=cursor.execute(f"SELECT * FROM mydb.users WHERE id= {user_id}")
-
+print("select query executed")
 record = cursor.fetchall()
 
 for row in record:
