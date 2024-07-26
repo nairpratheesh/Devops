@@ -12,10 +12,10 @@ print("Rest app starting")
 
 
 # for terminating rest api server when required
-# @app.route('/stop_server')
-# def stop_server():
-#     os.kill(os.getpid(), signal.CTRL_C_EVENT)
-#     return 'server stopped'
+@app.route('/stop_server')
+def stop_server():
+    os.kill(os.getpid(), signal.CTRL_C_EVENT)
+    return 'server stopped'
 
 
 # supported methods
@@ -64,6 +64,7 @@ def user(user_id):
         else:
             return {'status': 'error', 'reason': 'no such id'}, 500  # status
 
-
-app.run(host='127.0.0.1', port=5000)
-print("Rest app started2")
+try:
+    app.run(host='127.0.0.1', port=5000)
+except:
+    print("Not able to start rest app")
