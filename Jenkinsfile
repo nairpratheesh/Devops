@@ -8,7 +8,7 @@ pipeline {
 
 //                     withEnv(['C:\\users\\prath\\PycharmProjects\\June5']) {
 
-                       bat 'start/min rest_app.py'
+                       bat 'rest_app.py'
 //                         bat 'start/min web_app.py'
 //                      bat 'backend_testing.py'
 //                         bat 'frontend_testing.py'
