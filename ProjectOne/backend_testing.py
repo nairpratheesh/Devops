@@ -11,7 +11,9 @@ user_id = 35
 def back_testing(id, name):
     print("from back_testing", user_id, user_name)
     url_str = f'http://127.0.0.1:5000/users/{user_id}'
+    print("connecting to rest app")
     requests.post(url_str, json={"user_name": user_name})
+    print("connected  to rest app",url_str)
     return requests.get(url_str)
 
 res = back_testing(user_id, user_name)
