@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('run backend server') {
             steps {
-                dir ('C:\\users\\prath\\PycharmProjects\\June5\\ProjectOne'){
+                dir ('C:\\users\\prath\\PycharmProjects\\June5'){
 
 //                     withEnv(['C:\\users\\prath\\PycharmProjects\\June5']) {
 
