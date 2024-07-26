@@ -3,7 +3,7 @@ import signal
 
 from flask import Flask
 
-from ProjectOne.db_connector import get_user_name_from_db
+from db_connector import get_user_name_from_db
 
 app = Flask(__name__)
 
