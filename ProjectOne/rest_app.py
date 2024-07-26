@@ -10,11 +10,12 @@ app = Flask(__name__)
 users = {}
 print("Rest app starting")
 
+
 # for terminating rest api server when required
-@app.route('/stop_server')
-def stop_server():
-    os.kill(os.getpid(), signal.CTRL_C_EVENT)
-    return 'server stopped'
+# @app.route('/stop_server')
+# def stop_server():
+#     os.kill(os.getpid(), signal.CTRL_C_EVENT)
+#     return 'server stopped'
 
 
 # supported methods
