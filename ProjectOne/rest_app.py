@@ -8,12 +8,15 @@ app = Flask(__name__)
 
 # local users storage
 users = {}
+print("Rest app starting")
 
 # for terminating rest api server when required
 @app.route('/stop_server')
 def stop_server():
-    os.kill(os.getpid(),signal.CTRL_C_EVENT)
+    os.kill(os.getpid(), signal.CTRL_C_EVENT)
     return 'server stopped'
+
+
 # supported methods
 @app.route('/users/<user_id>', methods=['GET', 'POST', 'DELETE', 'PUT'])
 def user(user_id):
@@ -54,7 +57,7 @@ def user(user_id):
         # request_data = request.json
         print("rest app before delete call user id is ", user_id)
         status = delete_user_name(user_id)
-        print("stats from restapi",status)
+        print("stats from restapi", status)
         if status == 1:
             return {'status': 'OK', 'user deleted': user_id}, 200  # status
         else:
@@ -62,3 +65,4 @@ def user(user_id):
 
 
 app.run(host='127.0.0.1', port=5000)
+print("Rest app started2")
