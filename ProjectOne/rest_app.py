@@ -2,7 +2,7 @@ from flask import Flask, request
 import os
 import signal
 
-from ProjectOne.db_connector import get_user_name_from_db, create_new_user, update_user_name, delete_user_name
+from db_connector import get_user_name_from_db, create_new_user, update_user_name, delete_user_name
 
 app = Flask(__name__)
 
