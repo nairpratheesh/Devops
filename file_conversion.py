@@ -11,7 +11,7 @@ content = urlopen(req)
 df = pd.read_csv(content)
 print("before sorting",df)
 df.sort_values(["Name"],axis=0,ascending=[True],inplace=True)
-# data = pd.read_csv('C:\\Users\\prath\\PycharmProjects\\June5\\sort.txt')
+
 print("After converting",df)
 print(df.to_json())
 
